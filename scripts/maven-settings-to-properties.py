@@ -22,8 +22,8 @@ EVA_SEQCOL_MAPPING = {
     'spring.jpa.hibernate.ddl-auto':   '=update',
     'controller.auth.admin.username':  'seqcol.admin-user',
     'controller.auth.admin.password':  'seqcol.admin-password',
-    'ftp.proxy.host':                  '=hh-wwwcache.ebi.ac.uk',
-    'ftp.proxy.port':                  '=3128'
+    'ftp.proxy.host':                  '=null',
+    'ftp.proxy.port':                  '=0'
 }
 
 CONTIG_ALIAS_MAPPING = {
