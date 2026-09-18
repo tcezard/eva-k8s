@@ -34,3 +34,10 @@ secretGenerator:
 - name: eva-seqcol-config
   files:
   - application.properties
+
+# Init script that creates the "eva" schema the app expects, run by the postgres
+# image's /docker-entrypoint-initdb.d convention (see postgres.yaml)
+configMapGenerator:
+- name: postgres-initdb
+  files:
+  - init-eva-schema.sql

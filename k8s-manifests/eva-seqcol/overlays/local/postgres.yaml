@@ -47,3 +47,11 @@ spec:
             command: ["pg_isready", "-U", "seqcol_user", "-d", "seqcol_db"]
           initialDelaySeconds: 5
           periodSeconds: 5
+        volumeMounts:
+        - name: postgres-initdb
+          mountPath: /docker-entrypoint-initdb.d
+          readOnly: true
+      volumes:
+      - name: postgres-initdb
+        configMap:
+          name: postgres-initdb
